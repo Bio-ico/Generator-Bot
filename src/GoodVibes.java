@@ -40,7 +40,7 @@ public class GoodVibes {
                 new Quote(),
                 new wikiped()
         ));
-        final String token = "NzI4NjY3MTgwMTMxOTQyNTAx.Xv9uMQ.S5WSe3UaHdC9U8Ncy0UVZ4gSuEw";
+        final String token = "";
         final DiscordClient dclient = DiscordClient.create(token);
         final GatewayDiscordClient client = dclient.login().block();
         client.updatePresence(Presence.online(Activity.playing("generating things."))).subscribe();
