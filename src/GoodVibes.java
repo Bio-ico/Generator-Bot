@@ -32,6 +32,7 @@ public class GoodVibes {
     public static void main(String[] arguments) throws Exception {
         commands = new ArrayList<>(Arrays.asList(
                 new Help(),
+                new hug(),
                 new ubf(),
                 new anime(),
                 new mtg(),
@@ -40,7 +41,7 @@ public class GoodVibes {
                 new Quote(),
                 new wikiped()
         ));
-        final String token = "";
+        final String token = "NzI4NjY3MTgwMTMxOTQyNTAx.Xv9uMQ.z-gUDoXRIlEANNQzeqyZqElP90A";
         final DiscordClient dclient = DiscordClient.create(token);
         final GatewayDiscordClient client = dclient.login().block();
         client.updatePresence(Presence.online(Activity.playing("generating things."))).subscribe();
@@ -49,7 +50,12 @@ public class GoodVibes {
                             final String content = event.getMessage().getContent(); // 3.1 Message.getContent() is a String
                             for (final Command entry : commands) {
                                 if (content.startsWith('-' + entry.cmd)) {
-                                    entry.execute(event);
+                                    try {
+                                        entry.execute(event);
+                                    }
+                                    catch (Exception e){
+                                        e.printStackTrace();
+                                    }
                                     break;
                                 }
                             }

@@ -19,6 +19,20 @@ public class SendEmbed {
             });
         }).block();
     }
+
+    public static void send_hug(String outer, String imgUrl, MessageCreateEvent event){
+        final Message message = event.getMessage();
+        final MessageChannel channel = message.getChannel().block();
+        channel.createMessage(messageSpec -> {
+            messageSpec.setContent(outer);
+            messageSpec.setEmbed(embedSpec -> {
+                embedSpec.setColor(Color.DEEP_SEA)
+                        .setImage(imgUrl)
+                        .setFooter("Good Vibes Bot v0.1", sURL);
+            });
+        }).block();
+    }
+
     public static void send_direct_message(String header, String message, String footer, MessageCreateEvent event){
      //   event.reply(new EmbedBuilder().setTitle(header).setDescription(message).addField("footer", footer, false).build());
     }
