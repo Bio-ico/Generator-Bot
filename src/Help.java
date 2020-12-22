@@ -33,7 +33,7 @@ public class Help extends Command {
 
     @Override
     public void execute(MessageCreateEvent event) {
-        String body = "A Bot made by "+ event.getClient().getUserById(Snowflake.of("726867603179438213")).block().getMention()+"\n\nyou can add me to your server by going here: \nhttps://discord.com/api/oauth2/authorize?client_id=728667180131942501&permissions=388160&scope=bot";
+        String body = "A bot created by "+ event.getClient().getUserById(Snowflake.of("726867603179438213")).block().getMention()+"\n\nyou can add me to your server by going here: \nhttps://discord.com/api/oauth2/authorize?client_id=728667180131942501&permissions=388160&scope=bot";
         for (final Command entry : GoodVibes.commands) {
             // We will be using ! as our "prefix" to any command in the system.
             body += "\n\n"+entry.cmd + ": "+entry.about;
