@@ -10,6 +10,7 @@ https://jsoup.org/
 **Generates requested/random (where available) things of the following sorts:**
 - **anime** (can specify MAL before the request to get the info from My Anime List)
 - **help** (gets info about the bot)
+- **hug** (hugs someone. options: \<empty\> | \<me\> | \<@user\>)
 - **mtg** (gets magic cards, and will search if not given a full name)
 - **mus** (can specify a series, but not a particular song)
 - **pkmn** (gets a pokemon, along with gif and information. can specify shiny after the pkmn name)
